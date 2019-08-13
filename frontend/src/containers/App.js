@@ -1,15 +1,14 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css'
-import './App.css';
-import HomepageLayout from '../containers/Layout'
+import LandingPage from './LandingPage'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <HomepageLayout>
+        <LandingPage>
 
-        </HomepageLayout>
+        </LandingPage>
       </header>
     </div>
   );
