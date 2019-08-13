@@ -1,21 +1,15 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
 import {
     Button,
     Container,
     Divider,
     Grid,
     Header,
-    Icon,
     Image,
     List,
-    Menu,
-    Responsive,
     Segment,
-    Sidebar,
-    Visibility,
 } from 'semantic-ui-react'
-import { getWidth } from '../utils'
 import DesktopContainer from '../containers/LandingPageLayouts/DesktopLayout'
 import MobileContainer from '../containers/LandingPageLayouts/MobileLayout'
 
@@ -37,18 +31,11 @@ const LandingPage = () => (
                 <Grid.Row>
                     <Grid.Column width={8}>
                         <Header as='h3' style={{ fontSize: '2em' }}>
-                            We Help Companies and Companions
+                            Sé más productivo con Jelly
             </Header>
                         <p style={{ fontSize: '1.33em' }}>
-                            We can give your company superpowers to do things that they never thought possible.
-                            Let us delight your customers and empower your needs... through pure data analytics.
-            </p>
-                        <Header as='h3' style={{ fontSize: '2em' }}>
-                            We Make Bananas That Can Dance
-            </Header>
-                        <p style={{ fontSize: '1.33em' }}>
-                            Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-                            bioengineered.
+                            Jelly es mas seguro, inteligente, y facil de usar, lo que te permite ahorrar tiempo y
+                            ser mas productivo con tu nomina
             </p>
                     </Grid.Column>
                     <Grid.Column floated='right' width={6}>
@@ -56,8 +43,8 @@ const LandingPage = () => (
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column textAlign='center'>
-                        <Button size='huge'>Check Them Out</Button>
+                    <Grid.Column textAlign='left'>
+                        <Button color='purple' size='huge'>Crear una cuenta</Button>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -67,13 +54,13 @@ const LandingPage = () => (
                 <Grid.Row textAlign='center'>
                     <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                         <Header as='h3' style={{ fontSize: '2em' }}>
-                            "What a Company"
+                            "Coño"
             </Header>
                         <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
                     </Grid.Column>
                     <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                         <Header as='h3' style={{ fontSize: '2em' }}>
-                            "I shouldn't have gone with their competitor."
+                            "Klk"
             </Header>
                         <p style={{ fontSize: '1.33em' }}>
                             <Image avatar src='/images/avatar/large/nan.jpg' />
