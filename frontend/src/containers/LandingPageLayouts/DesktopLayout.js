@@ -9,6 +9,7 @@ import {
     Visibility,
 } from 'semantic-ui-react'
 import { getWidth } from '../../utils'
+import { Link } from "react-router-dom";
 
 
 class DesktopContainer extends Component {
@@ -42,10 +43,16 @@ class DesktopContainer extends Component {
                                 <Menu.Item as='h1' style={{ color: 'purple', fontWeight: 'bold' }}>Jelly</Menu.Item>
                                 <Menu.Item position='right'>
                                     <Menu.Item>Para empresas</Menu.Item>
-                                    <Menu.Item>Acceder</Menu.Item>
-                                    <Button as='a' color='purple' primary={fixed} style={{ marginLeft: '0.5em' }}>
-                                        Crear una cuenta
-                  </Button>
+                                    <React.Fragment>
+                                        <Link to="/login">
+                                            <Menu.Item>Acceder</Menu.Item>
+                                        </Link>
+                                        <Link to="/signup">
+                                            <Button as='a' color='purple' primary={fixed} style={{ marginLeft: '0.5em' }}>
+                                                Crear una cuenta
+                                            </Button>
+                                        </Link>
+                                    </React.Fragment>
                                 </Menu.Item>
                             </Container>
                         </Menu>

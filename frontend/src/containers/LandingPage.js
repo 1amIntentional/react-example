@@ -12,6 +12,8 @@ import {
 } from 'semantic-ui-react'
 import DesktopContainer from '../containers/LandingPageLayouts/DesktopLayout'
 import MobileContainer from '../containers/LandingPageLayouts/MobileLayout'
+import { Link } from "react-router-dom";
+
 
 const ResponsiveContainer = ({ children }) => (
     <div>
@@ -44,7 +46,11 @@ const LandingPage = () => (
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column textAlign='left'>
-                        <Button color='purple' size='huge'>Crear una cuenta</Button>
+                        <React.Fragment>
+                            <Link to="/signup">
+                                <Button color='purple' size='huge'>Crear una cuenta</Button>
+                            </Link>
+                        </React.Fragment>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
