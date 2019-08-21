@@ -68,16 +68,20 @@ class RegistrationForm extends React.Component {
                   iconPosition="left"
                   placeholder="Correo electronico"
                 />
-                <Form.Input
-                  onChange={this.handleChange}
-                  fluid
-                  value={password1}
-                  name="password1"
-                  icon="lock"
-                  iconPosition="left"
-                  placeholder="Contraseña"
-                  type="password"
-                />
+                <Grid columns={2}>
+                <Grid.Column>
+                  <Form.Input
+                    onChange={this.handleChange}
+                    fluid
+                    value={password1}
+                    name="password1"
+                    icon="lock"
+                    iconPosition="left"
+                    placeholder="Contraseña"
+                    type="password"
+                  />
+                </Grid.Column>
+                <Grid.Column>
                 <Form.Input
                   onChange={this.handleChange}
                   fluid
@@ -88,7 +92,9 @@ class RegistrationForm extends React.Component {
                   placeholder="Confirmacion"
                   type="password"
                 />
-
+                </Grid.Column>
+                </Grid>
+                <br></br>
                 <Button
                   color="purple"
                   fluid
