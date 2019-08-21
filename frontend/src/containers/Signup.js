@@ -14,6 +14,8 @@ import { authSignup } from "../store/actions/auth";
 class RegistrationForm extends React.Component {
   state = {
     username: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password1: "",
     password2: ""
@@ -21,8 +23,8 @@ class RegistrationForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { username, email, password1, password2 } = this.state;
-    this.props.signup(username, email, password1, password2);
+    const { username, first_name, last_name, email, password1, password2 } = this.state;
+    this.props.signup(username, first_name, last_name, email, password1, password2);
   };
 
   handleChange = e => {
@@ -30,7 +32,7 @@ class RegistrationForm extends React.Component {
   };
 
   render() {
-    const { username, email, password1, password2 } = this.state;
+    const { username, first_name, last_name, email, password1, password2 } = this.state;
     const { error, loading, token } = this.props;
     if (token) {
       return <Redirect to="/" />;
@@ -59,6 +61,30 @@ class RegistrationForm extends React.Component {
                   iconPosition="left"
                   placeholder="Usuario"
                 />
+                <Grid columns={2}>
+                <Grid.Column>
+                `<Form.Input
+                    onChange={this.handleChange}
+                    value={first_name}
+                    name="first_name"
+                    fluid
+                    icon="user"
+                    iconPosition="left"
+                    placeholder="Nombre"
+                  />`
+                </Grid.Column>
+                <Grid.Column>
+                `<Form.Input
+                    onChange={this.handleChange}
+                    value={last_name}
+                    name="last_name"
+                    fluid
+                    icon="user"
+                    iconPosition="left"
+                    placeholder="Apellido"
+                  />`
+                </Grid.Column>
+                </Grid>
                 <Form.Input
                   onChange={this.handleChange}
                   value={email}
@@ -126,8 +152,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    signup: (username, email, password1, password2) =>
-      dispatch(authSignup(username, email, password1, password2))
+    signup: (username, first_name, last_name, email, password1, password2) =>
+      dispatch(authSignup(username, first_name, last_name, email, password1, password2))
   };
 };
 
